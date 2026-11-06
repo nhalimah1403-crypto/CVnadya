@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadya Shafwah | Portfolio & Dreams</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        skySoft: '#E0F2FE',
+                        iceBlue: '#F0F9FF',
+                        powderBlue: '#BAE6FD',
+                        royalSoft: '#38BDF8',
+                        deepBlue: '#0284C7',
+                        navyAccent: '#0C4A6E'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom animations & gradient masks */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+        .animate-pulse-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(186, 230, 253, 0.5);
+        }
+        .glass-dark {
+            background: rgba(12, 74, 110, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-iceBlue via-skySoft to-slate-100 text-slate-800 font-sans antialiased selection:bg-powderBlue selection:text-navyAccent min-h-screen">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300 py-4 px-6 md:px-12 shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-serif font-bold text-navyAccent tracking-tight flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-deepBlue to-powderBlue flex items-center justify-center text-white text-sm">NS</span>
+                Nadya Shafwah<span class="text-deepBlue">.</span>
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#about" class="hover:text-deepBlue transition-colors">Tentang Saya</a>
+                <a href="#singing" class="hover:text-deepBlue transition-colors">Bernyanyi</a>
+                <a href="#business" class="hover:text-deepBlue transition-colors">Cita-Cita</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-deepBlue to-royalSoft text-white font-semibold shadow-md shadow-sky-300 hover:shadow-lg hover:scale-105 transition-all">Kontak</a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-navyAccent text-2xl focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-sky-100 flex flex-col gap-4 text-center font-medium">
+            <a href="#about" class="mobile-link text-slate-700 hover:text-deepBlue py-2">Tentang Saya</a>
+            <a href="#singing" class="mobile-link text-slate-700 hover:text-deepBlue py-2">Bernyanyi</a>
+            <a href="#business" class="mobile-link text-slate-700 hover:text-deepBlue py-2">Cita-Cita</a>
+            <a href="#contact" class="mobile-link text-deepBlue font-semibold py-2">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden">
+        <!-- Decorative Glowing Circles -->
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-powderBlue rounded-full blur-3xl opacity-50 animate-pulse-glow"></div>
+        <div class="absolute bottom-10 -right-20 w-80 h-80 bg-sky-300 rounded-full blur-3xl opacity-40 animate-pulse-glow" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Text Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-sky-200 text-deepBlue text-sm font-semibold shadow-sm">
+                    <i class="fa-solid fa-sparkles"></i> Welcoming to My Creative Space
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-navyAccent leading-tight">
+                    Halo, Saya <br/>
+                    <span class="bg-gradient-to-r from-deepBlue via-royalSoft to-sky-600 bg-clip-text text-transparent">Nadya Shafwah</span>
+                </h1>
+                <p class="text-lg text-slate-600 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Seorang pecinta seni musik yang bertekad menjadi <span class="font-semibold text-navyAccent">Pengusaha Masa Depan</span>. Mengombinasikan harmoni suara dan impian bisnis yang cemerlang.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="#business" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-gradient-to-r from-navyAccent to-deepBlue text-white font-semibold shadow-lg shadow-sky-200 hover:shadow-xl hover:scale-105 transition-all text-center">
+                        <i class="fa-solid fa-briefcase mr-2"></i> Impian Bisnis
+                    </a>
+                    <a href="#singing" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white text-navyAccent border border-sky-200 font-semibold shadow-sm hover:bg-sky-50 hover:scale-105 transition-all text-center">
+                        <i class="fa-solid fa-music mr-2 text-deepBlue"></i> Dengar Nyanyian
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Graphic/Card -->
+            <div class="relative flex justify-center">
+                <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-3xl bg-gradient-to-tr from-powderBlue via-royalSoft to-deepBlue p-1.5 shadow-2xl animate-float">
+                    <div class="w-full h-full bg-white rounded-[22px] flex flex-col justify-between p-6 relative overflow-hidden">
+                        <!-- Card Decorative Background Elements -->
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-skySoft rounded-full opacity-60"></div>
+                        
+                        <!-- Card Header -->
+                        <div class="flex justify-between items-center relative z-10">
+                            <div class="w-10 h-10 rounded-full bg-skySoft flex items-center justify-center text-deepBlue">
+                                <i class="fa-solid fa-microphone-lines text-xl"></i>
+                            </div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Personal Badge</span>
+                        </div>
+
+                        <!-- Card Center Artwork/Avatar Placeholder -->
+                        <div class="my-auto text-center relative z-10 space-y-3">
+                            <div class="w-28 h-28 mx-auto rounded-full bg-gradient-to-br from-sky-200 to-powderBlue p-1 shadow-inner">
+                                <div class="w-full h-full rounded-full bg-sky-50 flex items-center justify-center text-navyAccent text-4xl">
+                                    <i class="fa-solid fa-user-astronaut text-deepBlue"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-xl text-navyAccent">Nadya Shafwah</h3>
+                                <p class="text-xs text-slate-500">Singer & Future Entrepreneur</p>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer -->
+                        <div class="glass-card rounded-xl p-3 flex justify-around text-center text-xs relative z-10 border border-sky-100">
+                            <div>
+                                <p class="text-slate-400">Hobi</p>
+                                <p class="font-semibold text-navyAccent">Bernyanyi 🎵</p>
+                            </div>
+                            <div class="border-r border-sky-200"></div>
+                            <div>
+                                <p class="text-slate-400">Cita-Cita</p>
+                                <p class="font-semibold text-navyAccent">Pengusaha 💼</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-deepBlue uppercase mb-2">Mengenal Lebih Dekat</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-navyAccent">Tentang Nadya Shafwah</h3>
+                <div class="w-16 h-1 bg-deepBlue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Hobi -->
+                <div class="glass-card rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-sky-100 group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-100 to-powderBlue text-deepBlue flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-navyAccent mb-3">Hobi: Bernyanyi</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Bagi Nadya, musik adalah ungkapan jiwa. Bernyanyi memberikan ketenangan, mengasah kreativitas, dan mengajarkan ekspresi emosi yang harmonis.
+                    </p>
+                </div>
+
+                <!-- Card 2: Cita-cita -->
+                <div class="glass-card rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-sky-100 group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-100 to-powderBlue text-deepBlue flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-navyAccent mb-3">Cita-Cita: Pengusaha</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Memiliki wawasan bisnis yang kuat dan keberanian mengambil peluang. Nadya bercita-cita mendirikan usaha kreatif yang bermanfaat bagi banyak orang.
+                    </p>
+                </div>
+
+                <!-- Card 3: Kepribadian -->
+                <div class="glass-card rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-sky-100 group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-100 to-powderBlue text-deepBlue flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-navyAccent mb-3">Filosofi Hidup</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        "Lakukan segala hal dengan ketulusan dan kerja keras. Seperti melodi yang indah, kesuksesan butuh proses harmoni yang konsisten."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SINGING SHOWCASE SECTION (Hobby Interactive Audio Player) -->
+    <section id="singing" class="py-20 px-6 bg-gradient-to-b from-transparent via-skySoft/50 to-transparent">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-deepBlue uppercase mb-2">Galeri Musik</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-navyAccent">Sudut Bernyanyi Nadya</h3>
+                <p class="text-slate-600 mt-3 text-sm">Dengarkan sampel melodi favorit dan latihan vokal terbaru dari Nadya Shafwah.</p>
+                <div class="w-16 h-1 bg-deepBlue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Audio Player Card -->
+            <div class="glass-card rounded-3xl p-6 md:p-10 shadow-xl border border-sky-200">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Album Art Vinyl simulation -->
+                    <div class="relative w-44 h-44 rounded-full bg-slate-800 flex items-center justify-center shadow-2xl p-2 shrink-0">
+                        <div id="vinyl-disc" class="w-full h-full rounded-full border-4 border-slate-700 bg-slate-900 flex items-center justify-center relative overflow-hidden transition-all duration-700">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-deepBlue to-royalSoft flex items-center justify-center text-white text-xs font-bold text-center">
+                                Nadya Cover
+                            </div>
+                        </div>
+                        <div class="absolute w-4 h-4 bg-white rounded-full shadow-inner"></div>
+                    </div>
+
+                    <!-- Song Info & Player Controls -->
+                    <div class="w-full space-y-5 text-center md:text-left">
+                        <div>
+                            <span class="px-3 py-1 rounded-full bg-sky-100 text-deepBlue text-xs font-semibold">Demo Track</span>
+                            <h4 id="song-title" class="text-2xl font-serif font-bold text-navyAccent mt-2">Harmoni Senja (Acoustic Cover)</h4>
+                            <p id="song-artist" class="text-sm text-slate-500">Vocal: Nadya Shafwah</p>
+                        </div>
+
+                        <!-- Progress Bar (Simulated) -->
+                        <div class="space-y-1">
+                            <div class="w-full bg-sky-200 h-2 rounded-full cursor-pointer overflow-hidden" id="progress-container">
+                                <div id="progress-bar" class="bg-gradient-to-r from-deepBlue to-royalSoft h-full w-0 transition-all duration-200"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-400">
+                                <span id="current-time">0:00</span>
+                                <span id="duration-time">2:45</span>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="flex items-center justify-center md:justify-start gap-6 pt-2">
+                            <button id="prev-btn" class="text-slate-400 hover:text-navyAccent transition-colors text-lg" title="Lagu Sebelumnya">
+                                <i class="fa-solid fa-backward-step"></i>
+                            </button>
+                            <button id="play-btn" class="w-14 h-14 rounded-full bg-gradient-to-r from-deepBlue to-royalSoft text-white flex items-center justify-center text-xl shadow-lg shadow-sky-300 hover:scale-105 transition-all">
+                                <i id="play-icon" class="fa-solid fa-play ml-1"></i>
+                            </button>
+                            <button id="next-btn" class="text-slate-400 hover:text-navyAccent transition-colors text-lg" title="Lagu Selanjutnya">
+                                <i class="fa-solid fa-forward-step"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playlist Selector -->
+                <div class="mt-8 pt-6 border-t border-sky-100 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <button class="song-item text-left p-3 rounded-xl bg-white/60 hover:bg-white border border-sky-100 transition-all flex items-center justify-between" data-index="0" data-title="Harmoni Senja (Acoustic Cover)" data-duration="2:45">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-compact-disc text-deepBlue"></i>
+                            <div>
+                                <p class="text-sm font-semibold text-navyAccent">Harmoni Senja</p>
+                                <p class="text-xs text-slate-400">Pop Acoustic</p>
+                            </div>
+                        </div>
+                        <span class="text-xs text-slate-400">2:45</span>
+                    </button>
+                    <button class="song-item text-left p-3 rounded-xl bg-white/60 hover:bg-white border border-sky-100 transition-all flex items-center justify-between" data-index="1" data-title="Melodi Impian (Piano Ballad)" data-duration="3:12">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-compact-disc text-slate-400"></i>
+                            <div>
+                                <p class="text-sm font-semibold text-navyAccent">Melodi Impian</p>
+                                <p class="text-xs text-slate-400">Piano Ballad</p>
+                            </div>
+                        </div>
+                        <span class="text-xs text-slate-400">3:12</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUTURE BUSINESS IDEAS (Entrepreneurship Ambition Section) -->
+    <section id="business" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-deepBlue uppercase mb-2">Visi & Cita-Cita</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-navyAccent">Rencana Bisnis Masa Depan</h3>
+                <p class="text-slate-600 mt-3 text-sm">Beberapa konsep usaha yang ingin diwujudkan oleh Nadya Shafwah sebagai calon pengusaha muda.</p>
+                <div class="w-16 h-1 bg-deepBlue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Concept 1 -->
+                <div class="glass-card rounded-3xl p-8 border border-sky-200 relative overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-deepBlue text-white flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-powderBlue/40 text-navyAccent text-xs font-semibold">Konsep 01</span>
+                        </div>
+                        <h4 class="text-2xl font-serif font-bold text-navyAccent">Shafwah Music & Cafe Studio</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Menggabungkan tempat nongkrong yang nyaman dengan studio musik & panggung akustik live. Memfasilitasi anak muda untuk menikmati kopi sekaligus mengekspresikan bakat seni suara mereka.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-sky-100 flex items-center gap-2 text-xs font-medium text-deepBlue">
+                        <i class="fa-solid fa-check-circle"></i> Industri Kreatif & F&B
+                    </div>
+                </div>
+
+                <!-- Concept 2 -->
+                <div class="glass-card rounded-3xl p-8 border border-sky-200 relative overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-xl bg-deepBlue text-white flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-shirt"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-powderBlue/40 text-navyAccent text-xs font-semibold">Konsep 02</span>
+                        </div>
+                        <h4 class="text-2xl font-serif font-bold text-navyAccent">Soft-Blue Fashion & Lifestyle</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Brand pakaian lokal dengan nuansa warna lembut dan elegan (pastel blue theme). Fokus pada desain modern yang nyaman digunakan sehari-hari bagi generasi muda.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-sky-100 flex items-center gap-2 text-xs font-medium text-deepBlue">
+                        <i class="fa-solid fa-check-circle"></i> Fashion & E-Commerce
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Roadmap / Goal Counter -->
+            <div class="mt-12 glass-dark rounded-3xl p-8 text-white text-center shadow-xl">
+                <h4 class="text-xl font-serif font-bold mb-6">Target Pencapaian Nadya</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-3xl font-bold text-powderBlue">100%</div>
+                        <div class="text-xs text-slate-300 mt-1">Semangat & Dedikasi</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-3xl font-bold text-powderBlue">5+</div>
+                        <div class="text-xs text-slate-300 mt-1">Lagu & Cover Musik</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-3xl font-bold text-powderBlue">2</div>
+                        <div class="text-xs text-slate-300 mt-1">Rencana Model Bisnis</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-3xl font-bold text-powderBlue">2026+</div>
+                        <div class="text-xs text-slate-300 mt-1">Tahun Peluncuran Ide</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-t from-skySoft/60 to-transparent">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-deepBlue uppercase mb-2">Terhubung</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-navyAccent">Kirim Pesan ke Nadya</h3>
+                <p class="text-slate-600 mt-3 text-sm">Punya saran bisnis, ajakan kolaborasi bernyanyi, atau sekadar ingin menyapa?</p>
+                <div class="w-16 h-1 bg-deepBlue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl border border-sky-200 relative">
+                <!-- Notification Banner -->
+                <div id="toast-msg" class="hidden mb-6 p-4 rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-800 text-sm flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>
+                    <span>Terima kasih! Pesan Anda telah terkirim kepada Nadya Shafwah.</span>
+                </div>
+
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-navyAccent uppercase tracking-wider mb-2">Nama Anda</label>
+                            <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl bg-white/80 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-deepBlue text-slate-700 text-sm transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navyAccent uppercase tracking-wider mb-2">Email</label>
+                            <input type="email" required placeholder="email@contoh.com" class="w-full px-4 py-3 rounded-xl bg-white/80 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-deepBlue text-slate-700 text-sm transition-all">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-navyAccent uppercase tracking-wider mb-2">Subjek Pesan</label>
+                        <select class="w-full px-4 py-3 rounded-xl bg-white/80 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-deepBlue text-slate-700 text-sm transition-all">
+                            <option value="kolaborasi">Kolaborasi Musik / Bernyanyi</option>
+                            <option value="bisnis">Diskusi Peluang Bisnis</option>
+                            <option value="sapa">Menyapa & Berkenalan</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-navyAccent uppercase tracking-wider mb-2">Pesan</label>
+                        <textarea rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-white/80 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-deepBlue text-slate-700 text-sm transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-navyAccent to-deepBlue text-white font-semibold shadow-lg shadow-sky-300 hover:shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Kirim Pesan Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navyAccent text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div>
+                <h4 class="text-2xl font-serif font-bold text-powderBlue">Nadya Shafwah</h4>
+                <p class="text-xs text-slate-300 mt-1">Penyanyi & Calon Pengusaha Sukses</p>
+            </div>
+            
+            <div class="flex items-center gap-6 text-xl text-sky-200">
+                <a href="#" class="hover:text-white transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-white transition-colors" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+                <a href="#" class="hover:text-white transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <p class="text-xs text-slate-400">
+                © 2026 Nadya Shafwah. Designed with Soft Blue Aesthetic.
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Audio Player Simulation
+        const playBtn = document.getElementById('play-btn');
+        const playIcon = document.getElementById('play-icon');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const vinylDisc = document.getElementById('vinyl-disc');
+        const songTitle = document.getElementById('song-title');
+        const songItems = document.querySelectorAll('.song-item');
+
+        let isPlaying = false;
+        let progress = 0;
+        let timer = null;
+
+        function togglePlay() {
+            if (!isPlaying) {
+                isPlaying = true;
+                playIcon.classList.remove('fa-play');
+                playIcon.classList.add('fa-pause');
+                vinylDisc.classList.add('animate-spin');
+                
+                // Simulated timer
+                timer = setInterval(() => {
+                    if (progress < 100) {
+                        progress += 1;
+                        progressBar.style.width = progress + '%';
+                        
+                        // Calculate simulated seconds
+                        let totalSec = 165; // 2:45
+                        let currentSec = Math.floor((progress / 100) * totalSec);
+                        let mins = Math.floor(currentSec / 60);
+                        let secs = currentSec % 60;
+                        currentTimeEl.textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                    } else {
+                        resetPlayer();
+                    }
+                }, 300);
+            } else {
+                pausePlayer();
+            }
+        }
+
+        function pausePlayer() {
+            isPlaying = false;
+            playIcon.classList.remove('fa-pause');
+            playIcon.classList.add('fa-play');
+            vinylDisc.classList.remove('animate-spin');
+            clearInterval(timer);
+        }
+
+        function resetPlayer() {
+            pausePlayer();
+            progress = 0;
+            progressBar.style.width = '0%';
+            currentTimeEl.textContent = '0:00';
+        }
+
+        playBtn.addEventListener('click', togglePlay);
+
+        // Playlist click switching
+        songItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const title = this.getAttribute('data-title');
+                songTitle.textContent = title;
+                
+                // Highlight selected track icon
+                songItems.forEach(i => {
+                    const icon = i.querySelector('.fa-compact-disc');
+                    icon.classList.remove('text-deepBlue');
+                    icon.classList.add('text-slate-400');
+                });
+                const currentIcon = this.querySelector('.fa-compact-disc');
+                currentIcon.classList.remove('text-slate-400');
+                currentIcon.classList.add('text-deepBlue');
+
+                resetPlayer();
+                togglePlay();
+            });
+        });
+
+        // Contact Form Toast Simulation
+        const contactForm = document.getElementById('contact-form');
+        const toastMsg = document.getElementById('toast-msg');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            toastMsg.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                toastMsg.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
